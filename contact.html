@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/contact.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"referrerpolicy="no-referrer"/>
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <!-- Email Js -->
+       <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+      <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "NIpsHdMn7KEHwXGoo",
+          });
+      })();
+      </script>
+    <title>Emex Medical (Contact us)</title>
+</head>
+<body>
+  <header>
+    <nav class="bar-nav">
+     <ul class="side-bar">
+       <!-- HEADER LINKS -->
+       <li class="header-list" onclick="hideSidebar()">
+         <i class="fa-solid fa-xmark"></i> 
+       </li>
+       <li class="header-list">
+       
+       </li>
+        <li class="header-list">
+         <a class="header-link" href="index.html" >Home</a>
+       </li>
+       <li class="header-list">
+           <a class="header-link" href="about.html">About Us</a>
+         </li>
+       <li class="header-list">
+         <a class="header-link" href="product.html" >Products</a>
+       </li>
+       <li class="header-list">
+         <a class="header-link" href="team.html">Our Team</a>
+       </li>
+        <li class="header-list">
+         <a class="header-link" href="#"id="active">Contact Us</a>
+       </li>
+       <!-- END OF HEADER LINKS -->
+     </ul>
+     <ul class="nav-ul">
+       <!-- HEADER LINKS -->
+       <li class="header-list">
+         <img class="logo" src="./Images/Emex.png" alt="">
+       </li>
+        <li class="header-list" id="hideOnMobile">
+         <a class="header-link" href="index.html" >Home</a>
+       </li>
+       <li class="header-list" id="hideOnMobile">
+           <a class="header-link" href="about.html">About Us</a>
+         </li>
+       <li class="header-list" id="hideOnMobile">
+         <a class="header-link" href="product.html">Products</a>
+       </li>
+       <li class="header-list" id="hideOnMobile">
+         <a class="header-link" href="team.html">Our Team</a>
+       </li>
+        <li class="header-list" id="hideOnMobile">
+         <a class="header-link" href="#"id="active">Contact Us</a>
+       </li>
+         <li class="header-list" onclick="showSidebar()" id="menu-btn">
+           <i class="fa-solid fa-bars"></i>
+       </li>
+       <!-- END OF HEADER LINKS -->
+     </ul>
+    </nav>
+  </header>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+      <div class="intro-container">
+       <div class="text-container">
+         <h3 class="intro-text-1">Contact  Us</h3>
+       </div>
+      </div>
+    </section>
+    
+    <!-- Back to Top Scroll Button -->
+    <div id="progress">
+      <span id="progress-value">&#x1F815;</span>
+    </div>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <h3 class="contact-head">Contact Us</h3><br><br>
+        <div class="contact-info">
+          <div class="shop-location">
+            <h4 class="our-office">Our Office Address</h4><br>
+            <ul class="locate-ul">
+              <li class="locate-list">
+                <i class="fa-solid fa-location-dot"></i> <span class="locay">Ogbo Ogwu Bridgehead Market, Onitsha <br>(God's Intervention Line, No. D91)Anambra, Nigeria.</span>
+              </li><br>
+              <li class="locate-list">
+                <i class="fa-solid fa-phone-volume"></i> <a class="contact-links" id="reduce2" href="tel:+2347047159651">+234 704 715 9651</a>
+              </li>
+              <li class="locate-list">
+                <i class="fa-solid fa-phone-volume"></i>  <a class="contact-links" id="reduce2" href="tel:+234812826 5650">+234 812 826 5650</a>
+              </li><br>
+              <li class="locate-list">
+                <i class="fa-solid fa-envelope"></i> <a class="contact-links" id="address2" href="mailto:emmymedicalenterprise@gmail.com">emmymedicalenterprise@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="message-container">
+            <h4 class="our-office" id="mess">Send Us a Message</h4><br>
+            <form action="" method="">
+              <div class="first-set">
+                <label for=""></label>
+                <input type="text" name="" id="fName" placeholder="First Name" required>
+  
+                <label for=""></label>
+                <input type="text" name="" id="lName" placeholder="Last Name" required>
+              </div>
+              <div class="second-set">
+                <label for=""></label>
+                <input type="email" name="" id="mailAddress" placeholder="Email Address" required>
+  
+                <label for=""></label>
+                <input type="text" name="" id="subject" placeholder="Subject" required><br>
+              </div>
+              <label for="Message">Message</label>
+              <textarea name="" id="messageJs" rows="6" cols="50"  placeholder="Enter Your Message" required></textarea><br><br>
+  
+              <div class="btn-container">
+                <button type="submit" onclick="sendMail()">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9915850462603!2d6.771483096002064!3d6.1318320043380385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1043933fff31c4f1%3A0xce2ab5d20759ab4f!2sBridgehead%20Market%2C%20Bridgehead%2C%20Onitsha%2C%20Anambra!5e0!3m2!1sen!2sng!4v1728245206372!5m2!1sen!2sng"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Footer Section -->
+      <footer>
+        <div class="foot-container">
+          <div class="foot-1">
+            <h4 class="foot-head">Quick Links</h4><br>
+            <ul class="foot-ul">
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="index.html">Home</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="about.html">About Us</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="product.html">Products</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="team.html">Our Team</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="foot-1">
+            <h4 class="foot-head"> Extra Links</h4><br>
+            <ul class="foot-ul">
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="index.html">Our Services</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-solid fa-circle-chevron-right"></i> <a class="footer-links" href="index.html">Customer's Testimonials</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="foot-1">
+            <h4 class="foot-head">Contact Us</h4><br>
+            <ul class="foot-ul">
+              <li class="foot-list">
+                <i class="fa-solid fa-phone-volume"></i>  <a class="footer-links" id="reduce" href="tel:+234812826 5650">+234 812 826 5650</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-solid fa-phone-volume"></i> <a class="footer-links" id="reduce" href="tel:+2347047159651">+234 704 715 9651</a>
+              </li>
+              <li class="foot-list"  >
+                <i class="fa-solid fa-envelope"></i> <a class="footer-links" id="address" href="mailto:emmymedicalenterprise@gmail.com">emmymedicalenterprise@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="foot-1">
+            <h4 class="foot-head">Follow Us On</h4><br>
+            <ul class="foot-ul">
+              <li class="foot-list">
+                <i class="fa-brands fa-facebook"></i> <a class="footer-links" href="https://web.facebook.com/profile.php?id=61564849846229">Emex Medical Supplying Enterprise  </a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-brands fa-x-twitter"></i> <a class="footer-links" href="https://x.com/EmmyOkolo59811">
+                  Emex Medical Supplying Enterprise</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-brands fa-instagram"></i> <a class="footer-links" href="https://www.instagram.com/emex.medical01/?hl=en">
+                  emex.medical01</a>
+              </li>
+              <li class="foot-list">
+                <i class="fa-brands fa-whatsapp"></i> <a class="footer-links" href="https://wa.link/pn2e8s">Whatsapp</a>
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class="copyright"> &copy; 2024 Emex Medical Supplying Enterprise. All rights reserved.</div>
+        <div class="programmer">Coded and Designed by Anthony Raphael(Cisco Mahlee)</div>
+       </footer>
+
+<!--Internal Javascript-->
+     <script>
+        // NAV BAR SECTION
+function showSidebar() {
+    const sideBar = document.querySelector(".side-bar");
+    sideBar.style.display = "flex";
+}
+function hideSidebar() {
+    const sideBar = document.querySelector(".side-bar");
+    sideBar.style.display = "none";
+}
+      
+             // Scroll Reveal Section
+         ScrollReveal({
+             reset: true,
+             distance:'60px',
+             duration:2500,
+             delay:200
+            });
+            ScrollReveal().reveal('.text-container, .con-list, .welcome-head, .service-head, .hot-pizza-head, .pizza-menu-head, .extra-img, .blog-head, .customer-2, .customer-5', { delay: 50, origin: 'top' });
+            ScrollReveal().reveal('.programmer', { delay: 50, origin: 'right' });
+            ScrollReveal().reveal('.copyright', { delay: 50, origin: 'left' });
+        // Scroll Button
+  let calcScrollValue = () =>{
+    let scrollProgress = document.getElementById('progress');
+    let progressValue = document.getElementById('progress-value');
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100)/ calcHeight);
+    if (pos > 100) {
+        scrollProgress.style.display = "grid";
+    }
+    else{
+        scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
+    });
+    scrollProgress.style.background = `conic-gradient(dodgerblue ${scrollValue}%, #d7d7d7 ${scrollValue}%)`
+};
+
+
+
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue; 
+
+  // Email Js
+   function sendMail() {
+    let parms ={
+      name:  document.getElementById('fName').value,
+      email:  document.getElementById('mailAddress').value,
+      subject:  document.getElementById('subject').value,
+      message:  document.getElementById('messageJs').value,
+    }
+    emailjs.send("service_n91p2sr","template_7g24pb5",parms).then(alert("Email Sent!!"))
+   }
+     </script>
+</body>
+</html>

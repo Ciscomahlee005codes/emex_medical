@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.logo{
+    width: 15%;
+    border-radius: 50%;
+    
+}
+.bar-nav {
+    background-color: #000000;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    padding: 10px;
+}
+
+.bar-nav .nav-ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+/* .bar-nav .header-list {
+    height: 50px;
+} */
+
+h1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+}
+
+#active {
+    color: dodgerblue;
+    display: block;
+}
+/* SCROLL TO TOP */
+
+#progress {
+    background-color: dodgerblue;
+    z-index: 3;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #b1afaf;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+}
+.header-list, .header-link{
+    display: inline-block;
+}
+.bar-nav .header-link {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header-link:hover {
+    position: relative;
+    /* bottom: 7px; */
+    display: block;
+    color: dodgerblue;
+    transition: width 2s, linear, 0.5s;
+}
+.bar-nav .header-list:first-child {
+    margin-right: auto;
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    color: #333232;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.side-bar .header-list {
+    width: 100%;
+}
+
+.side-bar .header-link {
+    width: 100%;
+}
+
+.fa-bars {
+    color: #dddedf;
+    font-size: 26px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1.2rem;
+}
+.fa-bars:hover{
+    color: #5bd7fd;
+    transition: 800ms ease;
+}
+.fa-xmark {
+    position: relative;
+    left: 1rem;
+    top: 10px;
+    font-size: 25px;
+    color: gainsboro;
+}
+
+.fa-xmark:hover {
+    color: rgb(255, 255, 255);
+}
+
+#menu-btn {
+    display: none;
+}
+/* Intro Section */
+.intro-section{
+    background-image: url(..//Images/IMG-20240902-WA0018.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 620px;
+     animation: animate 16s infinite;
+}
+@keyframes animate {
+    0%,100%{
+        background-image: url(..//Images/IMG-20240902-WA0018.jpg);
+    }
+   25% {
+       background-image: url(..//Images/IMG-20240902-WA0025.jpg);
+   }
+   50%{
+       background-image: url(..//Images/IMG-20240903-WA0070.jpg);
+   }
+   75% {
+       background-image: url(..//Images/IMG-20240904-WA0074.jpg);
+   }
+}
+.intro-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 620px;
+    background: rgba(0, 0, 0, 0.5);
+ }
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 12rem;
+}
+.intro-text-1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: rgb(243, 243, 243);
+    font-family: "Nothing You Could Do", cursive;
+}
+.intro-text-2 {
+    font-family: "Josefin Sans", sans-serif;
+    color: honeydew;
+    font-size: 42px;
+    font-weight: 600;
+}
+.intro-text-3 {
+    font-family: "Josefin Sans", sans-serif;
+    color: honeydew;
+    font-size: 28px;
+    font-weight: 600;
+}
+.product-link{
+    font-size: 23px;
+    color: azure;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    border: 2px whitesmoke solid;
+    border-radius: 50px;
+    padding: 25px;
+    background-color: #000000;   
+}
+.product-link:hover{
+    background-color: #383737;
+    color: rgb(255, 255, 255) ;
+    transition: 700ms ease;
+}
+/* Service Section */
+.service-section{
+    background-image: url(..//Images/bg_4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+}
+.service-head{
+    color: mintcream;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 34px;
+}
+.service-text{
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+}
+.question-head{
+    color: aliceblue;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 24px;
+}
+.icon-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.fa-handshake, .fa-hand-holding-dollar, .fa-award, .fa-clock{
+    border: #000000 solid 1.5px;
+    background-color: #706f6f;
+    font-size: 38px;
+    color: navy;
+    padding: 30px 40px;
+}
+.icon-1{
+    line-height: 2.5rem;
+}
+.icon-text1, .icon-text2, .icon-text3, .icon-text4{
+    color: aliceblue;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+/* Customer's Testimonials */
+.customers-section{
+    background-image: url(..//Images/bg_4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+}
+.customers-head{
+    color: aliceblue;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 22px;
+}
+.customer-head-text{
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+}
+.main-customers{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+.customer-1, .customer-2,
+.customer-3, .customer-4,
+.customer-5 , .customer-6{
+
+    border: 1.5px black solid;
+    width: 85%;
+    background-color: rgb(168, 166, 166);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px;
+}
+.customer-content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.client-1{
+    margin: auto;
+    width: 30%;
+    height: 150px;
+    border-radius: 50%;
+}
+.client{
+    margin: auto;
+    width: 35%;
+    border-radius: 50%;
+}
+.client-name{
+    color: blue;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 16.5px;
+}
+.occupation{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+.stars{
+    display: flex;
+    justify-content: center;
+}
+.fa-star{
+    color: rgb(241, 212, 43);
+}
+#white{
+    color: aliceblue;
+}
+.fa-star-half-stroke{
+    color: rgb(241, 212, 43);
+}
+.client-content{
+    font-family: "Poppins", sans-serif;
+}
+/* Footer Section */
+footer{
+    padding: 20px;
+    background-color: #000000;
+}
+.foot-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+.foot-head{
+    color: aliceblue;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+.foot-list{
+    list-style: none;
+    line-height: 2rem;
+}
+.footer-links{
+    color: rgb(223, 222, 222);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+.fa-circle-chevron-right, .fa-phone-volume, .fa-envelope{
+    color: #706f6f;
+}
+.fa-tiktok, .fa-whatsapp, .fa-instagram, .fa-facebook, .fa-x-twitter{
+    color: #e4e3e3;
+}
+.copyright{
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+.programmer{
+    font-family: "Josefin Sans", sans-serif;
+    color: #5bd7fd;
+    text-align: center; 
+}
+/* Responsive Design */
+@media (max-width:1114px) {
+    .header-list{
+        width: 70%;
+    }
+    .logo{
+        width: 35%;
+        border-radius: 50%;
+        
+    }
+.customer-1, .customer-2,
+.customer-3, .customer-4,
+.customer-5 , .customer-6{
+
+    border: 1.5px black solid;
+    width: 100%;
+    background-color: rgb(168, 166, 166);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px;
+}
+}
+@media (max-width:912px) {
+    .header-list, .header-link{
+        width: 150%;
+    }
+}
+@media (max-width:884px) {
+    .header-list, .header-link{
+        width: 150%;
+    }
+    .logo{
+        width: 35%;
+        border-radius: 50%;
+        
+    }
+    .main-customers{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+    }
+    .foot-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+    }
+    .foot-head{
+        color: aliceblue;
+        font-size: 18px;
+        font-family: "Josefin Sans", sans-serif;
+    } 
+}
+@media (max-width:834px) {
+    .foot-container{
+        display: grid;
+        grid-template-columns:auto auto;
+        gap: 30px;
+    }
+}
+@media (max-width:800px) {
+    #hideOnMobile {
+        display: none;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+    .logo{
+        width: 25%;
+        border-radius: 50%;
+        
+    }
+    .header-list{
+        line-height: 5rem;
+    }
+         .bar-nav .header-link {
+             height: 100%;
+             padding: 0 15px;
+             text-decoration: none;
+             display: flex;
+             align-items: center;
+             color: #ffffff;
+             font-family: "Josefin Sans", sans-serif;
+             font-size: 20px;
+             font-weight: 700;
+         }
+    
+         .header-link:hover {
+             position: relative;
+             /* bottom: 7px; */
+             background-color: dodgerblue;
+             transition: width 2s, linear, 0.5s;
+             color: aliceblue;
+         }
+         #active:hover{
+            background-color: dodgerblue;
+            transition: width 2s, linear, 0.5s;
+            color: aliceblue;
+         }
+}
+@media (max-width:540px) {
+    .intro-text-1 {
+        font-size: 34px;
+        font-weight: 900;
+        color: rgb(243, 243, 243);
+        font-family: "Nothing You Could Do", cursive;
+    }
+    .intro-text-2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .intro-text-3 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .fa-handshake, .fa-hand-holding-dollar, .fa-award, .fa-clock{
+        border: #000000 solid 1.5px;
+        background-color: #706f6f;
+        font-size: 38px;
+        color: navy;
+        padding: 20px 30px;
+    }
+    .icon-text1, .icon-text2, .icon-text3, .icon-text4{
+        color: aliceblue;
+        font-family: "Josefin Sans", sans-serif;
+        text-align: center;
+        font-size: 15px;
+    } 
+    .main-customers{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+    }
+.customer-1, .customer-2,
+.customer-3, .customer-4,
+.customer-5 , .customer-6{
+
+    border: 1.5px black solid;
+    width: 100%;
+    background-color: rgb(168, 166, 166);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px;
+}
+#address{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+ }
+}
+@media (max-width:430px) {
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 15rem;
+    }
+    .intro-text-1 {
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(243, 243, 243);
+        font-family: "Nothing You Could Do", cursive;
+    }
+    .intro-text-2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .intro-text-3 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .product-link{
+        font-size: 19px;
+        color: azure;
+        font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        border: 2px whitesmoke solid;
+        border-radius: 50px;
+        padding: 20px;
+        background-color: #000000;   
+    }
+    .product-link:hover{
+        background-color: #383737;
+        color: rgb(255, 255, 255) ;
+        transition: 700ms ease;
+    }
+    .icon-container{
+       display: grid;
+       grid-template-columns: auto auto;
+       gap: 30px;
+    }
+    .fa-handshake, .fa-hand-holding-dollar, .fa-award, .fa-clock{
+        border: #000000 solid 1.5px;
+        background-color: #706f6f;
+        font-size: 38px;
+        color: navy;
+        padding: 20px 30px;
+    }
+    .icon-text1, .icon-text2, .icon-text3, .icon-text4{
+        color: aliceblue;
+        font-family: "Josefin Sans", sans-serif;
+        text-align: center;
+        font-size: 15px;
+    } 
+    .main-customers{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+    }
+.customer-1, .customer-2,
+.customer-3, .customer-4,
+.customer-5 , .customer-6{
+
+    border: 1.5px black solid;
+    width: 100%;
+    background-color: rgb(168, 166, 166);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px;
+}
+.foot-container{
+    display: grid;
+    grid-template-columns:auto auto;
+    gap: 15px;
+}
+.footer-links{
+    color: rgb(223, 222, 222);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+#address{
+   word-wrap: break-word;
+   overflow-wrap: break-word;
+   word-break: break-all;
+}
+.programmer{
+    width: 65%;
+    text-align: center;
+    margin: auto;
+}
+}
+@media (max-width:414px) {
+    .intro-text-1 {
+        font-size: 26px;
+        font-weight: 900;
+        color: rgb(243, 243, 243);
+        font-family: "Nothing You Could Do", cursive;
+    }
+    .intro-text-2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .intro-text-3 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    #reduce{
+        font-size: 13px;
+    }
+}
+@media (max-width:393px) {
+     #reduce{
+        font-size: 12px;
+    }
+    .footer-links{
+        color: rgb(223, 222, 222);
+        text-decoration: none;
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+    }
+    .programmer{
+        width: 75%;
+        text-align: center;
+        margin: auto;
+    }
+}
+@media (max-width:390px) {
+    .intro-text-1 {
+        font-size: 24px;
+        font-weight: 900;
+        color: rgb(243, 243, 243);
+        font-family: "Nothing You Could Do", cursive;
+    }
+    .intro-text-2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .intro-text-3 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .product-link{
+        font-size: 17px;
+        color: azure;
+        font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        border: 2px whitesmoke solid;
+        border-radius: 50px;
+        padding: 20px;
+        background-color: #000000;   
+    }
+    .product-link:hover{
+        background-color: #383737;
+        color: rgb(255, 255, 255) ;
+        transition: 700ms ease;
+    }
+    .programmer{
+        width: 85%;
+        text-align: center;
+        margin: auto;
+    }
+}
+@media (max-width:320px) {
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 12rem;
+    }
+    .intro-text-1 {
+        font-size: 24px;
+        font-weight: 900;
+        color: rgb(243, 243, 243);
+        font-family: "Nothing You Could Do", cursive;
+    }
+    .intro-text-2 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .intro-text-3 {
+        font-family: "Josefin Sans", sans-serif;
+        color: honeydew;
+        font-size: 14px;
+        width: 85%;
+        font-weight: 600;
+    }
+}
