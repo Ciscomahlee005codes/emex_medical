@@ -213,6 +213,7 @@ h1 {
 }
 .team-title{
     font-family: "Dancing Script", cursive;
+    color: #830303;
     font-size: 28px;
 }
 .ceo{
@@ -294,6 +295,7 @@ h1 {
     font-family: "Dancing Script", cursive;
     text-align: center;   
     font-size: 28px;
+    color: rgb(184, 17, 17);
 }
 .co-text{
     font-family: "Poppins", sans-serif;
