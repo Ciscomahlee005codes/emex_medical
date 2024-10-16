@@ -607,7 +607,7 @@ footer{
         font-size: 15px;
     } 
     .client-content{
-        width: 110%;
+        text-align: center;
     }
     .main-customers{
         display: grid;
