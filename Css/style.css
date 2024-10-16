@@ -317,12 +317,12 @@ h1 {
     margin: auto;
     width: 35%;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 .client{
     margin: auto;
     width: 35%;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 .client-name{
     color: blue;

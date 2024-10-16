@@ -236,6 +236,7 @@ h1 {
 }
 .ceo-content{
     font-family: "Poppins", sans-serif; 
+    text-align: center;
 }
 .ceo-image{
     width: 60%;
@@ -299,6 +300,7 @@ h1 {
 }
 .co-text{
     font-family: "Poppins", sans-serif;
+    text-align: center;
 }
 .bold{
     font-weight: 600;
